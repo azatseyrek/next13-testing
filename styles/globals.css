@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background-color: #f6f6f6;
+}
+
+.customContainer {
+  display: grid;
+  grid-template-columns: 1fr min(1440px, 94%) 1fr;
+  grid-template-rows: 96px auto 72px;
+}
+
+.customContainer > * {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.customContainer > .fluid {
+  grid-column: 1 / -1 !important;
+}
+
+a {
+  transition: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+a:hover {
+  color: #89d5b4;
+}
