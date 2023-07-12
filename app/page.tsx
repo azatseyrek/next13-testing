@@ -1,8 +1,11 @@
 export default function Home() {
   return (
-    <main>
-      <h1>welcome</h1>
-      <h3>react</h3>
+    <main className="flex items-center justify-center">
+      <h1 className="animate-pulse text-3xl font-bold uppercase shadow-md">
+        welcome to test app
+      </h1>
     </main>
   );
 }
+
+// 60-100-33-60

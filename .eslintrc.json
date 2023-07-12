@@ -10,5 +10,10 @@
       ],
       "extends": ["plugin:testing-library/react"]
     }
-  ]
+  ],
+  // rules...
+  // disable no-unused-vars rule for test files
+  "rules": {
+    "no-unused-vars": "off"
+  }
 }

@@ -10,9 +10,9 @@ const Header = () => {
       <div className="flex cursor-pointer items-center justify-between ">
         <Link
           href="/"
-          className="flex items-center gap-2 text-4xl font-bold uppercase text-green-800 "
+          className="flex items-center gap-2 text-2xl font-bold uppercase text-green-800 "
         >
-          <SiLichess color="green" size={56} /> TEST
+          <SiLichess size={56} /> TEST APP
         </Link>
         <nav className="flex cursor-pointer justify-between gap-12 font-bold">
           <Link href="/">Home</Link>

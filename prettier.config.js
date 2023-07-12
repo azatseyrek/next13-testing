@@ -6,7 +6,7 @@ module.exports = {
   insertPragma: false,
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
-  printWidth: 80,
+  printWidth: 120,
   proseWrap: 'always',
   quoteProps: 'as-needed',
   requirePragma: false,
@@ -16,6 +16,7 @@ module.exports = {
   trailingComma: 'all',
   useTabs: false,
   arrowParens: 'always',
+  // disabel object new line
 
   importOrder: [
     '^(react/(.*)$)|^(react$)',
@@ -37,5 +38,4 @@ module.exports = {
   ],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
-
 };
