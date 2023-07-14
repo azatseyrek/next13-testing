@@ -32,14 +32,32 @@ class DatabaseClient {
   }
 
   reset() {
-    this.users = [];
+    this.users = [
+      {
+        id: 1,
+        name: 'Azat Seyrek',
+      },
+    ];
   }
 }
 
 describe('DatabaseClient', () => {
-  it('should initialize with two users', () => {
-    const dbClient = new DatabaseClient();
+  let dbClient;
+
+  beforeEach(() => {
+    dbClient = new DatabaseClient();
     dbClient.initialize();
+  });
+
+  afterEach(() => {
+    dbClient.reset();
+    // log the users
+    // console.log(dbClient.getUsers());
+  });
+
+  it('should initialize with two users', () => {
+    // const dbClient = new DatabaseClient();
+    // dbClient.initialize();
 
     const users = dbClient.getUsers();
 
@@ -57,21 +75,24 @@ describe('DatabaseClient', () => {
   });
 
   it('should delete a user', () => {
-    const dbClient = new DatabaseClient();
-    dbClient.initialize();
+    // const dbClient = new DatabaseClient();
+    // dbClient.initialize();
 
     dbClient.deleteUser(1);
 
-    const users = dbClient.getUsers();
+    const user = dbClient.getUser(1);
 
-    expect(users).toHaveLength(1);
-    expect(users).toMatchObject([
-      {
-        id: 2,
-        name: 'Jane Doe',
-      },
-    ]);
+    expect(user).toBeFalsy();
   });
 
-  it('should get a user', () => {});
+  it('should get a user', () => {
+    // const dbClient = new DatabaseClient();
+    // dbClient.initialize();
+
+    const user = dbClient.getUser(1);
+    expect(user).toMatchObject({
+      id: 1,
+      name: 'John Doe',
+    });
+  });
 });

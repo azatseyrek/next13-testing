@@ -17,7 +17,7 @@ function useCustomHook() {
 }
 
 it('should change name', () => {
-  const { result } = renderHook(() => useCustomHook());
+  const { result } = renderHook(() => useCustomHook()); //result is an object that contains the return value of the function that we passed to renderHook.
 
   expect(result.current.name).toBe('John Doe');
 
