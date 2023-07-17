@@ -7,8 +7,8 @@ const TestComponent = () => {
 };
 
 describe('Wrapper', () => {
-  it('should render the children',  () => {
+  it('should render the children', () => {
     customRender(<TestComponent />);
-    // screen.debug(); 
+    // screen.debug();
   });
 });

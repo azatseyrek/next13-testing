@@ -16,7 +16,7 @@ const Header = () => {
         </Link>
         <nav className="flex cursor-pointer justify-between gap-12 font-bold">
           <Link href="/">Home</Link>
-          <Link href="/">About Us</Link>
+          <Link href="/posts">Posts</Link>
           <Link href="/">References</Link>
           <Link href="/">Contact</Link>
         </nav>
